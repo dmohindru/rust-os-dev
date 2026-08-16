@@ -1,3 +1,3 @@
 # Reading bookmark
 
-https://os.phil-opp.com/vga-text-mode/#newlines
+https://os.phil-opp.com/testing/
