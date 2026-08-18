@@ -1,3 +1,3 @@
 # Reading bookmark
 
-https://os.phil-opp.com/testing/#hiding-qemu
+https://os.phil-opp.com/testing/#integration-tests
