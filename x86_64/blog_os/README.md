@@ -1,3 +1,3 @@
 # Reading bookmark
 
-https://os.phil-opp.com/testing/#integration-tests
+https://os.phil-opp.com/cpu-exceptions/
