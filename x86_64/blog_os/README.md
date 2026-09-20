@@ -1,3 +1,3 @@
 # Reading bookmark
 
-https://os.phil-opp.com/double-fault-exceptions/#the-global-descriptor-table
+https://os.phil-opp.com/hardware-interrupts/
