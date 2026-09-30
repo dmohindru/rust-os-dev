@@ -1,6 +1,6 @@
 # Reading bookmark
 
-https://os.phil-opp.com/paging-implementation/#implementation
+https://os.phil-opp.com/paging-implementation/#translating-addresses
 
 what are port to read/write data from?
 is it a pretty standard way to reading/writing just bytes?
