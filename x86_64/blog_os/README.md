@@ -1,6 +1,6 @@
 # Reading bookmark
 
-https://os.phil-opp.com/paging-implementation/#translating-addresses
+https://os.phil-opp.com/paging-implementation/#choosing-a-virtual-page
 
 what are port to read/write data from?
 is it a pretty standard way to reading/writing just bytes?
