@@ -1,6 +1,6 @@
 # Reading bookmark
 
-https://os.phil-opp.com/heap-allocation/
+https://os.phil-opp.com/heap-allocation/#creating-a-kernel-heap
 
 what are port to read/write data from?
 is it a pretty standard way to reading/writing just bytes?

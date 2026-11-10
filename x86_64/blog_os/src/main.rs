@@ -8,11 +8,17 @@ use blog_os::println;
 use bootloader::{BootInfo, entry_point};
 use core::panic::PanicInfo;
 
+extern crate alloc;
+
+use alloc::boxed::Box;
+
 entry_point!(kernel_main);
 
 fn kernel_main(_boot_info: &'static BootInfo) -> ! {
     println!("Hello World{}", "!");
     blog_os::init();
+
+    let x = Box::new(41);
 
     #[cfg(test)]
     test_main();
