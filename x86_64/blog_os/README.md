@@ -1,6 +1,6 @@
 # Reading bookmark
 
-https://os.phil-opp.com/heap-allocation/#using-an-allocator-crate
+https://os.phil-opp.com/allocator-designs/
 
 what are port to read/write data from?
 is it a pretty standard way to reading/writing just bytes?
