@@ -1,6 +1,6 @@
 # Reading bookmark
 
-https://os.phil-opp.com/allocator-designs/#the-alloc-from-region-function
+https://os.phil-opp.com/allocator-designs/#fixed-size-block-allocator
 
 what are port to read/write data from?
 is it a pretty standard way to reading/writing just bytes?

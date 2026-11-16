@@ -2,8 +2,8 @@ mod bump;
 mod linked_list;
 
 use alloc::alloc::{GlobalAlloc, Layout};
-use bump::BumpAllocator;
 use core::ptr::null_mut;
+use linked_list::LinkedListAllocator;
 use x86_64::{
     VirtAddr,
     structures::paging::{
@@ -47,7 +47,7 @@ unsafe impl GlobalAlloc for Dummy {
 }
 
 #[global_allocator]
-static ALLOCATOR: Locked<BumpAllocator> = Locked::new(BumpAllocator::new());
+static ALLOCATOR: Locked<LinkedListAllocator> = Locked::new(LinkedListAllocator::new());
 
 pub fn init_heap(
     mapper: &mut impl Mapper<Size4KiB>,
