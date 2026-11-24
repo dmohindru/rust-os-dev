@@ -4,14 +4,13 @@
 #![test_runner(blog_os::test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
+use alloc::{boxed::Box, rc::Rc, vec, vec::Vec};
 use blog_os::println;
+use blog_os::task::{Task, simple_executor::SimpleExecutor};
 use bootloader::{BootInfo, entry_point};
 use core::panic::PanicInfo;
 
 extern crate alloc;
-
-use alloc::{boxed::Box, rc::Rc, vec, vec::Vec};
-
 entry_point!(kernel_main);
 
 fn kernel_main(boot_info: &'static BootInfo) -> ! {
@@ -46,6 +45,10 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {
         Rc::strong_count(&cloned_reference)
     );
 
+    let mut executor = SimpleExecutor::new();
+    executor.spawn(Task::new(example_task()));
+    executor.run();
+
     #[cfg(test)]
     test_main();
 
@@ -65,4 +68,13 @@ fn panic(info: &PanicInfo) -> ! {
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     blog_os::test_panic_handler(info)
+}
+
+async fn async_number() -> u32 {
+    42
+}
+
+async fn example_task() {
+    let number = async_number().await;
+    println!("async number: {}", number);
 }
