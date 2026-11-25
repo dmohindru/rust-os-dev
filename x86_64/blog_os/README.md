@@ -1,6 +1,6 @@
 # Reading bookmark
 
-https://os.phil-opp.com/async-await/#waker-support
+https://os.phil-opp.com/async-await/#summary
 
 what are port to read/write data from?
 is it a pretty standard way to reading/writing just bytes?
